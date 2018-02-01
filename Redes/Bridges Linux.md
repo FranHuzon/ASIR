@@ -29,3 +29,10 @@ bridge name	bridge id		STP enabled	interfaces
 br0		8000.f079592efb09	no		eth0
 
 ~~~
+
+
+### brctl addif
+Añade una interfaz a un puente existente.
+~~~
+root@debian:~# brctl addif br0 eth0
+~~~
