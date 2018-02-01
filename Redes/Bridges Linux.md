@@ -1,4 +1,4 @@
-#Configuración
+# Configuración
 
 
 Para crear un nuevo bridge deberemos modificar el fichero ``/etc/network/interfaces``, en este caso crearemos el bridge **br0** que se configurará mediante un servidor **dhcp** y añadiremos la interfaz **eth0** a dicho puente:
