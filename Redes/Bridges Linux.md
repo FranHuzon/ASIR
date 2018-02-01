@@ -22,7 +22,7 @@ ifup br0
 
 
 ### brctl show
-Muestra los bridges existen y las interfaces que los componen.
+Muestra los bridges existentes y las interfaces que los componen.
 ~~~
 root@debian:~# brctl show
 bridge name	bridge id		STP enabled	interfaces
