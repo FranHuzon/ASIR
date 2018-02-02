@@ -55,3 +55,11 @@ tap0: tap UNKNOWN_FLAGS:800 user 1001
 tun0: tun UNKNOWN_FLAGS:800 user 1001
 root@debian:# 
 ~~~
+
+
+### ip tuntap del
+Elimina interfaces tun/tap existentes.
+~~~
+root@debian:# ip tuntap del dev tun0 mode tun
+root@debian:# ip tuntap del dev tap0 mode tap
+~~~
