@@ -1,5 +1,5 @@
 ### ip a
-Muestra información de todas las interfaces disponibles.
+Muestra información de toas las interfaces disponibles.
 ~~~
 jesus@debian:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
@@ -8,15 +8,44 @@ jesus@debian:~$ ip a
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host 
        valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master br0 state UP group default qlen 1000
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
     link/ether f0:79:59:2e:fb:09 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.2/24 brd 192.168.1.255 scope global eth0
+       valid_lft forever preferred_lft forever
 3: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-    link/ether 7e:9a:91:26:32:b3 brd ff:ff:ff:ff:ff:ff
-4: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether f0:79:59:2e:fb:09 brd ff:ff:ff:ff:ff:ff
-    inet 172.22.8.32/16 brd 172.22.255.255 scope global br0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::f279:59ff:fe2e:fb09/64 scope link 
-       valid_lft forever preferred_lft forever
+    link/ether 32:64:e7:ab:bb:df brd ff:ff:ff:ff:ff:ff
 jesus@debian:~$ 
+~~~
+
+
+### ip a add
+Añade una nueva dirección a una interfaz existente.
+~~~
+jesus@debian:~$ ip a add 192.168.1.3/24 dev eth0
+~~~
+
+
+### ip l set
+Levanta o baja una tarjeta existente.
+~~~
+jesus@debian:~$ ip l set eth0 up
+jesus@debian:~$ ip l set eth0 down
+~~~
+
+
+### ip tuntap add
+Crea interfaces tun e interfaces tap indicando el usuario propietario de dicha interfaz.
+~~~
+root@debian:# ip tuntap add mode tun user jesus
+root@debian:# ip tuntap add mode tap user jesus
+~~~
+
+
+### ip tuntap list
+Muestra las interfaces tun/tap existentes y su usuario propietario (UID).
+~~~
+oot@debian:# ip tuntap list
+tap0: tap UNKNOWN_FLAGS:800 user 1001
+tun0: tun UNKNOWN_FLAGS:800 user 1001
+root@debian:# 
 ~~~
