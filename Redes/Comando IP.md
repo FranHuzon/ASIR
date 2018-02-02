@@ -19,11 +19,17 @@ jesus@debian:~$
 
 
 ### ip a add
-Añade una nueva dirección a una interfaz existente.
+Añade una nueva dirección IP a una interfaz existente.
 ~~~
 jesus@debian:~$ ip a add 192.168.1.3/24 dev eth0
 ~~~
 
+
+### ip a del
+Elimina una dirección IP de una interfaz existente.
+~~~
+jesus@debian:~$ ip a del 192.168.1.3/24 dev eth0
+~~~
 
 ### ip l set
 Levanta o baja una tarjeta existente.
