@@ -27,21 +27,21 @@ ifup br0
 # Comandos
 
 
-### brctl addbr
+#### brctl addbr
 Añade un nuevo puente.
 ~~~
 root@debian:~# brctl addbr br0
 ~~~
 
 
-### brctl delbr
+#### brctl delbr
 Elimina un puente existente.
 ~~~
 root@debian:~# brctl delbr br0
 ~~~
 
 
-### brctl show
+#### brctl show
 Muestra los bridges existentes y las interfaces que los componen.
 ~~~
 root@debian:~# brctl show
@@ -51,14 +51,14 @@ br0		8000.f079592efb09	no		eth0
 ~~~
 
 
-### brctl addif
+#### brctl addif
 Añade una interfaz a un puente existente.
 ~~~
 root@debian:~# brctl addif br0 eth0
 ~~~
 
 
-### brctl delif
+#### brctl delif
 Elimina una interfaz de un puente existente.
 ~~~
 root@debian:~# brctl delif br0 eth0
