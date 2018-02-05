@@ -1,7 +1,7 @@
-### ip a
+### ip address
 Muestra información de toas las interfaces disponibles.
 ~~~
-jesus@debian:~$ ip a
+jesus@debian:~$ ip address
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -18,39 +18,32 @@ jesus@debian:~$
 ~~~
 
 
-### ip a add
+### ip address add 
 Añade una nueva dirección IP a una interfaz existente.
 ~~~
-jesus@debian:~$ ip a add 192.168.1.3/24 dev eth0
+jesus@debian:~$ ip address add {dirección ip} {máscara de red} dev {interfaz}
 ~~~
 
 
-### ip a del
+### ip address del
 Elimina una dirección IP de una interfaz existente.
 ~~~
-jesus@debian:~$ ip a del 192.168.1.3/24 dev eth0
-~~~
-
-### ip l set
-Levanta o baja una tarjeta existente.
-~~~
-jesus@debian:~$ ip l set eth0 up
-jesus@debian:~$ ip l set eth0 down
+jesus@debian:~$ ip address del {dirección ip} {máscara de red} dev {interfaz}
 ~~~
 
 
 ### ip tuntap add
 Crea interfaces tun e interfaces tap indicando el usuario propietario de dicha interfaz.
 ~~~
-root@debian:# ip tuntap add mode tun user jesus
-root@debian:# ip tuntap add mode tap user jesus
+root@debian:# ip tuntap add mode {modo} user {usuario}
+root@debian:# ip tuntap add mode {modo} user {usuario}
 ~~~
 
 
 ### ip tuntap list
 Muestra las interfaces tun/tap existentes y su usuario propietario (UID).
 ~~~
-oot@debian:# ip tuntap list
+root@debian:# ip tuntap list
 tap0: tap UNKNOWN_FLAGS:800 user 1001
 tun0: tun UNKNOWN_FLAGS:800 user 1001
 root@debian:# 
@@ -60,6 +53,28 @@ root@debian:#
 ### ip tuntap del
 Elimina interfaces tun/tap existentes.
 ~~~
-root@debian:# ip tuntap del dev tun0 mode tun
-root@debian:# ip tuntap del dev tap0 mode tap
+root@debian:# ip tuntap del dev {interfaz} mode {modo}
+root@debian:# ip tuntap del dev {interfaz} mode {modo}
+~~~
+
+
+### ip link set
+Permite administrar las interfaces existentes.
+
+
+#### up / down
+Permite subir o bajar una tarjeta existente.
+~~~
+jesus@debian:~$ ip link set {interfaz} up
+jesus@debian:~$ ip link set {interfaz} down
+~~~
+
+
+### ip link add
+Permite crear interfaces virtuales con distintas características.
+
+#### type bond
+Permite crear interfaces virtuales de tipo bonding.
+~~~
+root@debian:# ip link add name {interfaz} type 
 ~~~
