@@ -40,14 +40,12 @@ Permite administrar interfaces tun/tap.
 Crear interfaces tun/tap.
 ~~~
 root@debian:# ip tuntap add mode {modo} user {usuario}
-root@debian:# ip tuntap add mode {modo} user {usuario}
 ~~~
 
 
 ### del
 Eliminar interfaces tun/tap.
 ~~~
-root@debian:# ip tuntap del dev {interfaz} mode {modo}
 root@debian:# ip tuntap del dev {interfaz} mode {modo}
 ~~~
 
