@@ -1,4 +1,4 @@
-## ip address
+# ip address
 Muestra información de toas las interfaces disponibles y permite administrarlas.
 ~~~
 jesus@debian:~$ ip address
@@ -32,7 +32,7 @@ jesus@debian:~$ ip address del {dirección ip} {máscara de red} dev {interfaz}
 ~~~
 
 
-## ip tuntap
+# ip tuntap
 Permite administrar interfaces tun/tap.
 
 
@@ -60,7 +60,7 @@ root@debian:#
 ~~~
 
 
-## ip link set
+# ip link set
 Permite administrar las interfaces existentes.
 
 
@@ -78,7 +78,7 @@ jesus@debian:~$ ip link set {interfaz} down
 ~~~
 
 
-## ip link add
+# ip link add
 Permite crear interfaces virtuales.
 
 ### type bond
