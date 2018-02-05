@@ -84,5 +84,5 @@ Permite crear interfaces virtuales.
 ### type bond
 Permite crear interfaces virtuales de tipo bonding.
 ~~~
-root@debian:# ip link add name {interfaz} type 
+root@debian:# ip link add name {interfaz} type bond
 ~~~
