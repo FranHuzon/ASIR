@@ -1,5 +1,5 @@
 ## ip address
-Muestra información de toas las interfaces disponibles.
+Muestra información de toas las interfaces disponibles y permite administrarlas.
 ~~~
 jesus@debian:~$ ip address
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
@@ -18,30 +18,42 @@ jesus@debian:~$
 ~~~
 
 
-## ip address add 
+### add 
 Añade una nueva dirección IP a una interfaz existente.
 ~~~
 jesus@debian:~$ ip address add {dirección ip} {máscara de red} dev {interfaz}
 ~~~
 
 
-## ip address del
+### del
 Elimina una dirección IP de una interfaz existente.
 ~~~
 jesus@debian:~$ ip address del {dirección ip} {máscara de red} dev {interfaz}
 ~~~
 
 
-## ip tuntap add
-Crea interfaces tun e interfaces tap indicando el usuario propietario de dicha interfaz.
+## ip tuntap
+Permite administrar interfaces tun/tap.
+
+
+### add 
+Crear interfaces tun/tap.
 ~~~
 root@debian:# ip tuntap add mode {modo} user {usuario}
 root@debian:# ip tuntap add mode {modo} user {usuario}
 ~~~
 
 
-## ip tuntap list
-Muestra las interfaces tun/tap existentes y su usuario propietario (UID).
+### del
+Eliminar interfaces tun/tap.
+~~~
+root@debian:# ip tuntap del dev {interfaz} mode {modo}
+root@debian:# ip tuntap del dev {interfaz} mode {modo}
+~~~
+
+
+### list
+Muestra las interfaces tun/tap existentes.
 ~~~
 root@debian:# ip tuntap list
 tap0: tap UNKNOWN_FLAGS:800 user 1001
@@ -50,28 +62,26 @@ root@debian:#
 ~~~
 
 
-## ip tuntap del
-Elimina interfaces tun/tap existentes.
-~~~
-root@debian:# ip tuntap del dev {interfaz} mode {modo}
-root@debian:# ip tuntap del dev {interfaz} mode {modo}
-~~~
-
-
 ## ip link set
 Permite administrar las interfaces existentes.
 
 
-### up / down
-Permite subir o bajar una tarjeta existente.
+### up
+Levanta una interfaz existente.
 ~~~
 jesus@debian:~$ ip link set {interfaz} up
+~~~
+
+
+### down
+Baja una interfaz existente.
+~~~
 jesus@debian:~$ ip link set {interfaz} down
 ~~~
 
 
 ## ip link add
-Permite crear interfaces virtuales con distintas características.
+Permite crear interfaces virtuales.
 
 ### type bond
 Permite crear interfaces virtuales de tipo bonding.
