@@ -1,4 +1,4 @@
-### ip address
+## ip address
 Muestra información de toas las interfaces disponibles.
 ~~~
 jesus@debian:~$ ip address
@@ -18,21 +18,21 @@ jesus@debian:~$
 ~~~
 
 
-### ip address add 
+## ip address add 
 Añade una nueva dirección IP a una interfaz existente.
 ~~~
 jesus@debian:~$ ip address add {dirección ip} {máscara de red} dev {interfaz}
 ~~~
 
 
-### ip address del
+## ip address del
 Elimina una dirección IP de una interfaz existente.
 ~~~
 jesus@debian:~$ ip address del {dirección ip} {máscara de red} dev {interfaz}
 ~~~
 
 
-### ip tuntap add
+## ip tuntap add
 Crea interfaces tun e interfaces tap indicando el usuario propietario de dicha interfaz.
 ~~~
 root@debian:# ip tuntap add mode {modo} user {usuario}
@@ -40,7 +40,7 @@ root@debian:# ip tuntap add mode {modo} user {usuario}
 ~~~
 
 
-### ip tuntap list
+## ip tuntap list
 Muestra las interfaces tun/tap existentes y su usuario propietario (UID).
 ~~~
 root@debian:# ip tuntap list
@@ -50,7 +50,7 @@ root@debian:#
 ~~~
 
 
-### ip tuntap del
+## ip tuntap del
 Elimina interfaces tun/tap existentes.
 ~~~
 root@debian:# ip tuntap del dev {interfaz} mode {modo}
@@ -58,11 +58,11 @@ root@debian:# ip tuntap del dev {interfaz} mode {modo}
 ~~~
 
 
-### ip link set
+## ip link set
 Permite administrar las interfaces existentes.
 
 
-#### up / down
+### up / down
 Permite subir o bajar una tarjeta existente.
 ~~~
 jesus@debian:~$ ip link set {interfaz} up
@@ -70,10 +70,10 @@ jesus@debian:~$ ip link set {interfaz} down
 ~~~
 
 
-### ip link add
+## ip link add
 Permite crear interfaces virtuales con distintas características.
 
-#### type bond
+### type bond
 Permite crear interfaces virtuales de tipo bonding.
 ~~~
 root@debian:# ip link add name {interfaz} type 
