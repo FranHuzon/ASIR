@@ -1,6 +1,6 @@
 from Funciones import convertir_a_segundos, calcular_coste ,convertir_a_euros
 
-fichero = open("F:\ASIR o ASAR\Marcas\Funciones\Factura.txt", "r")
+fichero = open("Factura.txt", "r")
 lista = fichero.readlines()
 fichero.close()
 
