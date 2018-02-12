@@ -65,7 +65,7 @@ Permite administrar las interfaces existentes.
 
 
 ### add
-Permite crear interfaces virtuales de tipo bonding.
+Permite crear interfaces virtuales.
 ~~~
 root@debian:~# ip link add name {interfaz} type {bond | bridge | macvlan | dummy | ifb | vlan}
 ~~~
@@ -85,15 +85,58 @@ jesus@debian:~$ ip link set {interfaz} down
 ~~~
 
 
-### type
-Permite crear interfaces virtuales de distintos tipos.
-~~~
-root@debian:# ip link add name {interfaz} type {bond | bridge}
-~~~
-
-
 ### master
 Establece un maestro a una interfaz existente.
 ~~~
 root@debian:~# ip link set dev {interfaz} master {interfaz}
+~~~
+
+
+# Casos prácticos.
+
+## Creación de un bridge con varias interfaces.
+Creación del bridge.
+~~~
+root@debian:~# ip link add name br0 type bridge
+~~~
+
+
+Creación de las distintas interfaces.
+~~~
+root@debian:~# ip tuntap add tap0 mode tap user jesus
+root@debian:~# ip tuntap add tap1 mode tap user jesus
+~~~
+
+
+Añadir las interfaces al bridge.
+~~~
+root@debian:~# ip link set dev tap0 master br0
+root@debian:~# ip link set dev tap1 master br0
+~~~
+
+
+## Creación link aggregation de dos interfaces.
+Creación del bonding.
+~~~
+root@debian:~# ip link add name bond0 type bond
+~~~
+
+
+Creación de las distintas interfaces.
+~~~
+root@debian:~# ip tuntap add tap0 mode tap user jesus
+root@debian:~# ip tuntap add tap1 mode tap user jesus
+~~~
+
+
+Añadir las interfaces al bonding.
+~~~
+root@debian:~# ip link set dev tap0 master bond0
+root@debian:~# ip link set dev tap1 master bond0
+~~~
+
+
+## Creación de distintas VLAN.
+~~~
+root@debian:~# ip link add name {interfaz VLAN} link {interfaz fisicas} type {vlan} id {vid}
 ~~~
