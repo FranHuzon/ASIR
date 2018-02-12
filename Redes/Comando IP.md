@@ -105,6 +105,7 @@ Creación de las distintas interfaces.
 ~~~
 root@debian:~# ip tuntap add tap0 mode tap user jesus
 root@debian:~# ip tuntap add tap1 mode tap user jesus
+root@debian:~# ip tuntap add tap2 mode tap user jesus
 ~~~
 
 
@@ -112,6 +113,7 @@ Añadir las interfaces al bridge.
 ~~~
 root@debian:~# ip link set dev tap0 master br0
 root@debian:~# ip link set dev tap1 master br0
+root@debian:~# ip link set dev tap2 master br0
 ~~~
 
 
