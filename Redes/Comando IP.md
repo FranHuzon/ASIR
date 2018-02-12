@@ -39,29 +39,36 @@ Permite administrar interfaces tun/tap.
 ### add 
 Crear interfaces tun/tap.
 ~~~
-root@debian:# ip tuntap add mode {modo} user {usuario}
+root@debian:~# ip tuntap add mode {modo} user {usuario}
 ~~~
 
 
 ### del
 Eliminar interfaces tun/tap.
 ~~~
-root@debian:# ip tuntap del dev {interfaz} mode {modo}
+root@debian:~# ip tuntap del dev {interfaz} mode {modo}
 ~~~
 
 
 ### list
 Muestra las interfaces tun/tap existentes.
 ~~~
-root@debian:# ip tuntap list
+root@debian:~# ip tuntap list
 tap0: tap UNKNOWN_FLAGS:800 user 1001
 tun0: tun UNKNOWN_FLAGS:800 user 1001
-root@debian:# 
+root@debian:~# 
 ~~~
 
 
-# ip link set
+# ip link
 Permite administrar las interfaces existentes.
+
+
+### add
+Permite crear interfaces virtuales de tipo bonding.
+~~~
+root@debian:~# ip link add name {interfaz} type {bond | bridge | macvlan | dummy | ifb | vlan}
+~~~
 
 
 ### up
@@ -78,11 +85,15 @@ jesus@debian:~$ ip link set {interfaz} down
 ~~~
 
 
-# ip link add
-Permite crear interfaces virtuales.
-
-### type bond
-Permite crear interfaces virtuales de tipo bonding.
+### type
+Permite crear interfaces virtuales de distintos tipos.
 ~~~
-root@debian:# ip link add name {interfaz} type bond
+root@debian:# ip link add name {interfaz} type {bond | bridge}
+~~~
+
+
+### master
+Establece un maestro a una interfaz existente.
+~~~
+root@debian:~# ip link set dev {interfaz} master {interfaz}
 ~~~
