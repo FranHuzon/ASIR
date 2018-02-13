@@ -39,7 +39,7 @@ Permite administrar interfaces tun/tap.
 ### add 
 Crear interfaces tun/tap.
 ~~~
-root@debian:~# ip tuntap add mode {modo} user {usuario}
+root@debian:~# ip tuntap add {interfaz} mode {modo} user {usuario}
 ~~~
 
 
@@ -68,6 +68,13 @@ Permite administrar las interfaces existentes.
 Permite crear interfaces virtuales.
 ~~~
 root@debian:~# ip link add name {interfaz} type {bond | bridge | macvlan | dummy | ifb | vlan}
+~~~
+
+
+### delete
+Permite eliminar interfaces virtuales existentes.
+~~~
+root@debian:~# ip link delete dev {interfaz}
 ~~~
 
 
@@ -139,6 +146,31 @@ root@debian:~# ip link set dev tap1 master bond0
 
 
 ## Creación de distintas VLAN.
+Creación de las interfaces VLAN.
 ~~~
-root@debian:~# ip link add name {interfaz VLAN} link {interfaz fisicas} type {vlan} id {vid}
+root@debian:~# ip link add name eth0.1 link eth0 type vlan id 1
+root@debian:~# ip link add name eth0.5 link eth0 type vlan id 5
+~~~
+
+
+Creación de las interfaces virtuales.
+~~~
+root@debian:~# ip tuntap add tap01 mode tap user jesus
+root@debian:~# ip tuntap add tap05 mode tap user jesus
+~~~
+
+
+Creación de los distintos puentes.
+~~~
+root@debian:~# ip link add name br01 type bridge
+root@debian:~# ip link add name br05 type bridge
+~~~
+
+
+Añadir las distintas interfaces a sus respectivos bridges.
+~~~
+root@debian:~# ip link set dev eth0.1 master br01
+root@debian:~# ip link set dev tap01 master br01
+root@debian:~# ip link set dev eth0.5 master br05
+root@debian:~# ip link set dev tap05 master br05
 ~~~
