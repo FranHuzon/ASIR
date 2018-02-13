@@ -34,5 +34,5 @@ Vamos a lanzar una máquina virtual con las siguiente características:
 
 Para ello ejecutaremos el siguiente comando:
 ~~~
-jesus@debian:~$ kvm -m 512 -hda mv1.qcow2 -device virtio-net,netdev=n0,mac=$MAC0 -netdev tap,id=n0,ifname=tap0,script=no,downscript=no -device virtio-net,netdev=n1,mac=$MAC1 -netdev tap,id=n1,ifname=tap1,script=no,downscript=no
+jesus@debian:~$ kvm -m 512 -hda mv1.qcow2 -device virtio-net,netdev=n0,mac=$MAC0 -netdev tap,id=n0,ifname=tap0,script=no,downscript=no -device virtio-net,netdev=n0,mac=$MAC1 -netdev tap,id=n0,ifname=tap1,script=no,downscript=no
 ~~~

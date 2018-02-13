@@ -167,10 +167,27 @@ root@debian:~# ip link add name br05 type bridge
 ~~~
 
 
+Levantar todas las interfaces.
+~~~
+root@debian:~# ip link set eth0 up
+root@debian:~# ip link set eth0.1 up
+root@debian:~# ip link set eth0.5 up
+root@debian:~# ip link set tap01 up
+root@debian:~# ip link set tap05 up
+~~~
+
+
 Añadir las distintas interfaces a sus respectivos bridges.
 ~~~
 root@debian:~# ip link set dev eth0.1 master br01
 root@debian:~# ip link set dev tap01 master br01
 root@debian:~# ip link set dev eth0.5 master br05
 root@debian:~# ip link set dev tap05 master br05
+~~~
+
+
+Levantar los bridges.
+~~~
+root@debian:~# ip link set br01 up
+root@debian:~# ip link set br05 up
 ~~~
