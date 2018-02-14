@@ -536,10 +536,10 @@ root@debian:~#
 # Particionado con gdisk.
 
 
-Creación de distintos esquemas de particionado utilizando la herramienta **gdisk**.
+Creación de un esquema de particionado utilizando la herramienta **gdisk**.
 
 
-## Primer esquema.
+## Esquema.
 - Disco duro: 1 GB.
 - Partición Primaria: 150 MB, Tipo Linux.
 - Partición Lógica: Tipo Linux
