@@ -531,3 +531,281 @@ sdc
 sr0                                                      
 root@debian:~# 
 ~~~
+
+
+# Particionado con gdisk.
+
+
+Creación de distintos esquemas de particionado utilizando la herramienta **gdisk**.
+
+
+## Primer esquema.
+- Disco duro: 1 GB.
+- Partición Primaria: 150 MB, Tipo Linux.
+- Partición Lógica: Tipo Linux
+- Partición Lógica: Tipo Linux
+- Partición Lógica: Tipo ntfs
+- Partición Lógica: Tipo FAT32
+- Partición Lógica: Tipo swap.
+
+
+Ejecución de **gdisk** indicando el disco a formatear.
+~~~
+root@debian:~# gdisk /dev/sdb
+GPT fdisk (gdisk) version 1.0.1
+
+Partition table scan:
+  MBR: MBR only
+  BSD: not present
+  APM: not present
+  GPT: not present
+
+
+***************************************************************
+Found invalid GPT and valid MBR; converting MBR to GPT format
+in memory. THIS OPERATION IS POTENTIALLY DESTRUCTIVE! Exit by
+typing 'q' if you don't want to convert your MBR partitions
+to GPT format!
+***************************************************************
+
+
+Command (? for help):
+~~~
+
+
+Creación de las distintas particiones.
+~~~
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector (34-2097118, default = 2048) or {+-}size{KMGTP}: 
+Last sector (2048-2097118, default = 2097118) or {+-}size{KMGTP}: +150M
+Current type is 'Linux filesystem'
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n
+Partition number (2-128, default 2): 
+First sector (34-2097118, default = 309248) or {+-}size{KMGTP}: 
+Last sector (309248-2097118, default = 2097118) or {+-}size{KMGTP}: +175M
+Current type is 'Linux filesystem'
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n
+Partition number (3-128, default 3): 
+First sector (34-2097118, default = 667648) or {+-}size{KMGTP}: 
+Last sector (667648-2097118, default = 2097118) or {+-}size{KMGTP}: +175M
+Current type is 'Linux filesystem'
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n
+Partition number (4-128, default 4): 
+First sector (34-2097118, default = 1026048) or {+-}size{KMGTP}: 
+Last sector (1026048-2097118, default = 2097118) or {+-}size{KMGTP}: +175M
+Current type is 'Linux filesystem'
+Hex code or GUID (L to show codes, Enter = 8300): l
+0700 Microsoft basic data  0c01 Microsoft reserved    2700 Windows RE          
+3000 ONIE boot             3001 ONIE config           3900 Plan 9              
+4100 PowerPC PReP boot     4200 Windows LDM data      4201 Windows LDM metadata
+4202 Windows Storage Spac  7501 IBM GPFS              7f00 ChromeOS kernel     
+7f01 ChromeOS root         7f02 ChromeOS reserved     8200 Linux swap          
+8300 Linux filesystem      8301 Linux reserved        8302 Linux /home         
+8303 Linux x86 root (/)    8304 Linux x86-64 root (/  8305 Linux ARM64 root (/)
+8306 Linux /srv            8307 Linux ARM32 root (/)  8400 Intel Rapid Start   
+8e00 Linux LVM             a500 FreeBSD disklabel     a501 FreeBSD boot        
+a502 FreeBSD swap          a503 FreeBSD UFS           a504 FreeBSD ZFS         
+a505 FreeBSD Vinum/RAID    a580 Midnight BSD data     a581 Midnight BSD boot   
+a582 Midnight BSD swap     a583 Midnight BSD UFS      a584 Midnight BSD ZFS    
+a585 Midnight BSD Vinum    a600 OpenBSD disklabel     a800 Apple UFS           
+a901 NetBSD swap           a902 NetBSD FFS            a903 NetBSD LFS          
+a904 NetBSD concatenated   a905 NetBSD encrypted      a906 NetBSD RAID         
+ab00 Recovery HD           af00 Apple HFS/HFS+        af01 Apple RAID          
+af02 Apple RAID offline    af03 Apple label           af04 AppleTV recovery    
+af05 Apple Core Storage    bc00 Acronis Secure Zone   be00 Solaris boot        
+bf00 Solaris root          bf01 Solaris /usr & Mac Z  bf02 Solaris swap        
+bf03 Solaris backup        bf04 Solaris /var          bf05 Solaris /home       
+bf06 Solaris alternate se  bf07 Solaris Reserved 1    bf08 Solaris Reserved 2  
+Press the <Enter> key to see more codes:
+bf09 Solaris Reserved 3    bf0a Solaris Reserved 4    bf0b Solaris Reserved 5  
+c001 HP-UX data            c002 HP-UX service         ea00 Freedesktop $BOOT   
+eb00 Haiku BFS             ed00 Sony system partitio  ed01 Lenovo system partit
+ef00 EFI System            ef01 MBR partition scheme  ef02 BIOS boot partition 
+f800 Ceph OSD              f801 Ceph dm-crypt OSD     f802 Ceph journal        
+f803 Ceph dm-crypt journa  f804 Ceph disk in creatio  f805 Ceph dm-crypt disk i
+fb00 VMWare VMFS           fb01 VMWare reserved       fc00 VMWare kcore crash p
+fd00 Linux RAID            
+Hex code or GUID (L to show codes, Enter = 8300): 4202
+Changed type of partition to 'Windows Storage Spaces'
+
+Command (? for help): n
+Partition number (5-128, default 5): 
+First sector (34-2097118, default = 1384448) or {+-}size{KMGTP}: 
+Last sector (1384448-2097118, default = 2097118) or {+-}size{KMGTP}: +175M
+Current type is 'Linux filesystem'
+Hex code or GUID (L to show codes, Enter = 8300): l
+0700 Microsoft basic data  0c01 Microsoft reserved    2700 Windows RE          
+3000 ONIE boot             3001 ONIE config           3900 Plan 9              
+4100 PowerPC PReP boot     4200 Windows LDM data      4201 Windows LDM metadata
+4202 Windows Storage Spac  7501 IBM GPFS              7f00 ChromeOS kernel     
+7f01 ChromeOS root         7f02 ChromeOS reserved     8200 Linux swap          
+8300 Linux filesystem      8301 Linux reserved        8302 Linux /home         
+8303 Linux x86 root (/)    8304 Linux x86-64 root (/  8305 Linux ARM64 root (/)
+8306 Linux /srv            8307 Linux ARM32 root (/)  8400 Intel Rapid Start   
+8e00 Linux LVM             a500 FreeBSD disklabel     a501 FreeBSD boot        
+a502 FreeBSD swap          a503 FreeBSD UFS           a504 FreeBSD ZFS         
+a505 FreeBSD Vinum/RAID    a580 Midnight BSD data     a581 Midnight BSD boot   
+a582 Midnight BSD swap     a583 Midnight BSD UFS      a584 Midnight BSD ZFS    
+a585 Midnight BSD Vinum    a600 OpenBSD disklabel     a800 Apple UFS           
+a901 NetBSD swap           a902 NetBSD FFS            a903 NetBSD LFS          
+a904 NetBSD concatenated   a905 NetBSD encrypted      a906 NetBSD RAID         
+ab00 Recovery HD           af00 Apple HFS/HFS+        af01 Apple RAID          
+af02 Apple RAID offline    af03 Apple label           af04 AppleTV recovery    
+af05 Apple Core Storage    bc00 Acronis Secure Zone   be00 Solaris boot        
+bf00 Solaris root          bf01 Solaris /usr & Mac Z  bf02 Solaris swap        
+bf03 Solaris backup        bf04 Solaris /var          bf05 Solaris /home       
+bf06 Solaris alternate se  bf07 Solaris Reserved 1    bf08 Solaris Reserved 2  
+Press the <Enter> key to see more codes:
+bf09 Solaris Reserved 3    bf0a Solaris Reserved 4    bf0b Solaris Reserved 5  
+c001 HP-UX data            c002 HP-UX service         ea00 Freedesktop $BOOT   
+eb00 Haiku BFS             ed00 Sony system partitio  ed01 Lenovo system partit
+ef00 EFI System            ef01 MBR partition scheme  ef02 BIOS boot partition 
+f800 Ceph OSD              f801 Ceph dm-crypt OSD     f802 Ceph journal        
+f803 Ceph dm-crypt journa  f804 Ceph disk in creatio  f805 Ceph dm-crypt disk i
+fb00 VMWare VMFS           fb01 VMWare reserved       fc00 VMWare kcore crash p
+fd00 Linux RAID            
+Hex code or GUID (L to show codes, Enter = 8300): 4202
+Changed type of partition to 'Windows Storage Spaces'
+
+Command (? for help): n
+Partition number (6-128, default 6): 
+First sector (34-2097118, default = 1742848) or {+-}size{KMGTP}: 
+Last sector (1742848-2097118, default = 2097118) or {+-}size{KMGTP}: 
+Current type is 'Linux filesystem'
+Hex code or GUID (L to show codes, Enter = 8300): l
+0700 Microsoft basic data  0c01 Microsoft reserved    2700 Windows RE          
+3000 ONIE boot             3001 ONIE config           3900 Plan 9              
+4100 PowerPC PReP boot     4200 Windows LDM data      4201 Windows LDM metadata
+4202 Windows Storage Spac  7501 IBM GPFS              7f00 ChromeOS kernel     
+7f01 ChromeOS root         7f02 ChromeOS reserved     8200 Linux swap          
+8300 Linux filesystem      8301 Linux reserved        8302 Linux /home         
+8303 Linux x86 root (/)    8304 Linux x86-64 root (/  8305 Linux ARM64 root (/)
+8306 Linux /srv            8307 Linux ARM32 root (/)  8400 Intel Rapid Start   
+8e00 Linux LVM             a500 FreeBSD disklabel     a501 FreeBSD boot        
+a502 FreeBSD swap          a503 FreeBSD UFS           a504 FreeBSD ZFS         
+a505 FreeBSD Vinum/RAID    a580 Midnight BSD data     a581 Midnight BSD boot   
+a582 Midnight BSD swap     a583 Midnight BSD UFS      a584 Midnight BSD ZFS    
+a585 Midnight BSD Vinum    a600 OpenBSD disklabel     a800 Apple UFS           
+a901 NetBSD swap           a902 NetBSD FFS            a903 NetBSD LFS          
+a904 NetBSD concatenated   a905 NetBSD encrypted      a906 NetBSD RAID         
+ab00 Recovery HD           af00 Apple HFS/HFS+        af01 Apple RAID          
+af02 Apple RAID offline    af03 Apple label           af04 AppleTV recovery    
+af05 Apple Core Storage    bc00 Acronis Secure Zone   be00 Solaris boot        
+bf00 Solaris root          bf01 Solaris /usr & Mac Z  bf02 Solaris swap        
+bf03 Solaris backup        bf04 Solaris /var          bf05 Solaris /home       
+bf06 Solaris alternate se  bf07 Solaris Reserved 1    bf08 Solaris Reserved 2  
+Press the <Enter> key to see more codes: 
+bf09 Solaris Reserved 3    bf0a Solaris Reserved 4    bf0b Solaris Reserved 5  
+c001 HP-UX data            c002 HP-UX service         ea00 Freedesktop $BOOT   
+eb00 Haiku BFS             ed00 Sony system partitio  ed01 Lenovo system partit
+ef00 EFI System            ef01 MBR partition scheme  ef02 BIOS boot partition 
+f800 Ceph OSD              f801 Ceph dm-crypt OSD     f802 Ceph journal        
+f803 Ceph dm-crypt journa  f804 Ceph disk in creatio  f805 Ceph dm-crypt disk i
+fb00 VMWare VMFS           fb01 VMWare reserved       fc00 VMWare kcore crash p
+fd00 Linux RAID            
+Hex code or GUID (L to show codes, Enter = 8300): 8200
+Changed type of partition to 'Linux swap'
+
+Command (? for help): p
+Disk /dev/sdb: 2097152 sectors, 1024.0 MiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): ED53A550-E33F-41F8-B5DB-7742A3D368AB
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 2097118
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2014 sectors (1007.0 KiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048          309247   150.0 MiB   8300  Linux filesystem
+   2          309248          667647   175.0 MiB   8300  Linux filesystem
+   3          667648         1026047   175.0 MiB   8300  Linux filesystem
+   4         1026048         1384447   175.0 MiB   4202  Windows Storage Spaces
+   5         1384448         1742847   175.0 MiB   4202  Windows Storage Spaces
+   6         1742848         2097118   173.0 MiB   8200  Linux swap
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): Y
+OK; writing new GUID partition table (GPT) to /dev/sdb.
+The operation has completed successfully.
+root@debian:~# 
+~~~
+
+
+Formateo de las particiones.
+~~~
+root@debian:~# mkfs.ext4 /dev/sdb1
+mke2fs 1.43.4 (31-Jan-2017)
+Se está creando un sistema de ficheros con 179200 bloques de 1k y 44880 nodos-i
+UUID del sistema de ficheros: b8507a78-bd46-4ecf-b4de-779dd17c0107
+Respaldo del superbloque guardado en los bloques: 
+	8193, 24577, 40961, 57345, 73729
+
+Reservando las tablas de grupo: hecho                           
+Escribiendo las tablas de nodos-i: hecho                           
+Creando el fichero de transacciones (4096 bloques): hecho
+Escribiendo superbloques y la información contable del sistema de ficheros: hecho
+
+root@debian:~# mkfs.ext4 /dev/sdb2
+mke2fs 1.43.4 (31-Jan-2017)
+Se está creando un sistema de ficheros con 179200 bloques de 1k y 44880 nodos-i
+UUID del sistema de ficheros: b8507a78-bd46-4ecf-b4de-779dd17c0107
+Respaldo del superbloque guardado en los bloques: 
+	8193, 24577, 40961, 57345, 73729
+
+Reservando las tablas de grupo: hecho                           
+Escribiendo las tablas de nodos-i: hecho                           
+Creando el fichero de transacciones (4096 bloques): hecho
+Escribiendo superbloques y la información contable del sistema de ficheros: hecho
+
+root@debian:~# mkfs.ext4 /dev/sdb3
+mke2fs 1.43.4 (31-Jan-2017)
+Se está creando un sistema de ficheros con 179200 bloques de 1k y 44880 nodos-i
+UUID del sistema de ficheros: b8507a78-bd46-4ecf-b4de-779dd17c0107
+Respaldo del superbloque guardado en los bloques: 
+	8193, 24577, 40961, 57345, 73729
+
+Reservando las tablas de grupo: hecho                           
+Escribiendo las tablas de nodos-i: hecho                           
+Creando el fichero de transacciones (4096 bloques): hecho
+Escribiendo superbloques y la información contable del sistema de ficheros: hecho
+
+root@debian:~# mkfs.ntfs /dev/sdb4
+Cluster size has been automatically set to 4096 bytes.
+Initializing device with zeroes: 100% - Done.
+Creating NTFS volume structures.
+mkntfs completed successfully. Have a nice day.
+root@debian:~# mkfs.vfat /dev/sdb5
+mkfs.fat 4.1 (2017-01-24)
+root@debian:~# mkswap /dev/sdc6
+Configurando espacio de intercambio versión 1, tamaño = 173 MiB (181379072 bytes)
+sin etiqueta, UUID=74397183-f710-4b34-aeb2-b09607ac1aaf
+root@debian:~# lsblk -f
+NAME   FSTYPE LABEL UUID                                 MOUNTPOINT
+sda                                                      
+├─sda1 ext4         9bb748be-c081-4450-8a0e-51903495fc92 /
+├─sda2                                                   
+└─sda5 swap         bff0697e-82c1-4182-bd1c-cac74dd0e016 [SWAP]
+sdb                                                      
+├─sdb1 ext4         5a534de5-96d1-4a5a-ad5e-2beff77db144 
+├─sdb2 ext4         b8507a78-bd46-4ecf-b4de-779dd17c0107 
+├─sdb3 ext4         723aa6f8-52b4-46f0-8b8f-7983eed84e4d 
+├─sdb4 ntfs         06BE8632672E9D7C                     
+├─sdb5 vfat         7AB0-88EB                            
+└─sdb6 swap         74397183-f710-4b34-aeb2-b09607ac1aaf 
+sr0                                                      
+root@debian:~# 
+~~~
