@@ -1,7 +1,7 @@
 # Particionado con fdisk.
 
 
-Vamos a crear distintos esquemas de particiones en Linux utilizando **fdisk**.
+Creación de distintos esquemas de particionado utilizando la herramienta **fdisk**.
 
 
 ## Primer esquema.
@@ -14,7 +14,7 @@ Vamos a crear distintos esquemas de particiones en Linux utilizando **fdisk**.
 - Partición Lógica: Tipo swap.
 
 
-Ejecutamos **fdisk** indicando el disco que queremos formatear.
+Ejecución de **fdisk** indicando el disco a formatear.
 ~~~
 root@debian:~# fdisk /dev/sdb
 
@@ -57,16 +57,7 @@ Orden (m para obtener ayuda): w
 Se ha modificado la tabla de particiones.
 Llamando a ioctl() para volver a leer la tabla de particiones.
 Se están sincronizando los discos.
-
-root@debian:~# lsblk -f
-NAME   FSTYPE LABEL UUID                                 MOUNTPOINT
-sda                                                      
-├─sda1 ext4         9bb748be-c081-4450-8a0e-51903495fc92 /
-├─sda2                                                   
-└─sda5 swap         bff0697e-82c1-4182-bd1c-cac74dd0e016 [SWAP]
-sdb                                                      
-└─sdb1         		
-sr0                                                      
+                                                   
 root@debian:~# 
 ~~~
 
@@ -360,7 +351,7 @@ root@debian:~#
 - Partición primaria: 200 MB
 - Partición primaria: 100 MB
 - Hueco: 500 MB
-- Partición extendida
+- Partición extendida.
 
 Ejecutamos **fdisk** indicando el disco que queremos formatear.
 ~~~
@@ -417,6 +408,8 @@ Orden (m para obtener ayuda): w
 Se ha modificado la tabla de particiones.
 Llamando a ioctl() para volver a leer la tabla de particiones.
 Se están sincronizando los discos.
+
+root@debian:~# 
 ~~~
 
 
@@ -426,12 +419,12 @@ Orden (m para obtener ayuda): n
 Tipo de partición
    p   primaria (2 primaria(s), 0 extendida(s), 2 libre(s))
    e   extendida (contenedor para particiones lógicas)
-Seleccionar (valor predeterminado p): p
+Seleccionar (valor predeterminado p): e
 Número de partición (3,4, valor predeterminado 3): 
 Primer sector (616448-2097151, valor predeterminado 616448): 1640448
 Último sector, +sectores o +tamaño{K,M,G,T,P} (1640448-2097151, valor predeterminado 2097151): 
 
-Crea una nueva partición 3 de tipo 'Linux' y de tamaño 223 MiB.
+Crea una nueva partición 3 de tipo 'Extended' y de tamaño 223 MiB.
 
 Orden (m para obtener ayuda): t
 Número de partición (1-3, valor predeterminado 3): 3
@@ -464,7 +457,7 @@ Tipo de partición (teclee L para ver todos los tipos): l
 1e  FAT16 de W95 (L 80  Minix antiguo   be  arranque de Sol ff  BBT            
 Tipo de partición (teclee L para ver todos los tipos): 82
 
-Se ha cambiado el tipo de la partición 'Linux' a 'Linux swap / Solaris'.
+Se ha cambiado el tipo de la partición 'Extended' a 'Linux swap / Solaris'.
 
 Orden (m para obtener ayuda): p
 Disco /dev/sdc: 1 GiB, 1073741824 bytes, 2097152 sectores
@@ -483,6 +476,8 @@ Orden (m para obtener ayuda): w
 Se ha modificado la tabla de particiones.
 Llamando a ioctl() para volver a leer la tabla de particiones.
 Se están sincronizando los discos.
+
+root@debian:~# 
 ~~~
 
 
@@ -515,5 +510,24 @@ Escribiendo superbloques y la información contable del sistema de ficheros: hec
 root@debian:~# mkswap /dev/sdc3
 Configurando espacio de intercambio versión 1, tamaño = 223 MiB (233828352 bytes)
 sin etiqueta, UUID=a520fd3d-50e9-43d2-b548-c91e91093f3b
+root@debian:~# lsblk -f
+NAME   FSTYPE LABEL UUID                                 MOUNTPOINT
+sda                                                      
+├─sda1 ext4         9bb748be-c081-4450-8a0e-51903495fc92 /
+├─sda2                                                   
+└─sda5 swap         bff0697e-82c1-4182-bd1c-cac74dd0e016 [SWAP]
+sdb                                                      
+├─sdb1 ext4         8f286382-7d21-4bfe-bad7-3892ae70f074 
+├─sdb2                                                   
+├─sdb5 ext4         bebf8bb5-ce05-45ab-9ced-f5f6eade1c23 
+├─sdb6 ext4         e1f4a759-7d3f-4322-8728-acca96b31d5f 
+├─sdb7 ntfs         0D8AADC91FEF15E1                     
+├─sdb8 vfat         D1D9-7AED                            
+└─sdb9 swap         57037336-53c7-42dc-b55b-85a28a218e44    
+sdc                                                      
+├─sdc1 ext4         5a534de5-96d1-4a5a-ad5e-2beff77db144 
+├─sdc2 ext4         caad7d21-c43c-4c24-9a36-171435356ef1 
+└─sdc3 swap         363332a4-15c6-4e12-a10e-fe4439ad65eb                                             
+sr0                                                      
 root@debian:~# 
 ~~~
