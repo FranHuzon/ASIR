@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<armas>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+	<arma>
+		<nombre rareza='2'></nombre>
+		<tipo></tipo>
+		<afilado></afilado>
+		<ataque></ataque>
+		<elemento atributo='fuego'></elemento>
+		<afinidad></afinidad>
+		<materiales>
+			<material></material>
+			<material></material>
+			<material></material>
+			<material></material>
+		</materiales>	
+	</arma>
+</armas>
+
+<armaduras>
+	<set set=''>
+		<casco>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</casco>
+		<peto>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</peto>
+		<guantes>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</guantes>
+		<cintura>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</cintura>
+		<botas>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</botas>
+	</set>
+	<set set=''>
+		<casco>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</casco>
+		<peto>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</peto>
+		<guantes>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</guantes>
+		<cintura>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</cintura>
+		<botas>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</botas>
+	</set>
+	<set set=''>
+		<casco>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</casco>
+		<peto>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</peto>
+		<guantes>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</guantes>
+		<cintura>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</cintura>
+		<botas>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</botas>
+	</set>
+	<set set=''>
+		<casco>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</casco>
+		<peto>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</peto>
+		<guantes>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</guantes>
+		<cintura>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</cintura>
+		<botas>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</botas>
+	</set>
+	<set set=''>
+		<casco>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</casco>
+		<peto>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</peto>
+		<guantes>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</guantes>
+		<cintura>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</cintura>
+		<botas>
+			<nombre></nombre>
+			<defensa></defensa>
+			<resistencias>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+				<elemento atributo=''></elemento>
+			</resistencias>
+			<habilidades>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+				<habilidad nombre=''></habilidad>
+			</habilidades>
+		</botas>
+	</set>
+</armaduras>
