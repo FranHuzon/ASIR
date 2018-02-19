@@ -1,3 +1,3 @@
 - HTTP: 80
-- HTTPS: 447
+- HTTPS: 443
 - DHCP: 67, 68
