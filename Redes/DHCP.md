@@ -1,4 +1,4 @@
-# Petición DHCP.
+# Peticiones DHCP.
 Estructura de los mensajes que se envian al hacer una petición DHCP.
 
 ### DHCP Discovery.
