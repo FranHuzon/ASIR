@@ -1,5 +1,8 @@
 - **HTTP:** 80
 - **HTTPS:** 443
-- **DHCP:** 67, 68
+- **DHCP:** 67, 68 (udp) 
 - **SSH:** 22
-- **DNS:** 53
+- **DNS:** 53 (udp)
+- **mysql:** 3306
+- **postgresql:** 5432
+- **oracle:** 1521
