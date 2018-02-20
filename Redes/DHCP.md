@@ -30,12 +30,12 @@ Estructura de los mensajes que se envian al hacer una petición DHCP.
 # Parámetros DHCP.
 Lista de parámetros de un servidor DHCP.
 
-
 - **default-lease-time:** Tiempo de concesión por defecto.
 - **max-lease-time:** Tiempo de concesión máxima mientras se renove la concesión.
 
 
 Lista de parámetros de un cliente DHCP.
+
 - **renew:** Hora a la que el cliente pedirá al servidor DHCP renovar su concesión.
 - **rebind:** Hora a la que el cliente, si no ha tenido respuesta a la renovación de concesión, envia la petición de renovación al broadcast.
 - **expire:** Hora a la que el cliente, si no ha tenido respuesta a ninguna renovación de concesión, desecha su concesión.
