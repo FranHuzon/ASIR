@@ -2,10 +2,10 @@
 Estructura de los mensajes que se envian al hacer una petición DHCP.
 
 ### DHCP Discovery.
-- Dirección: Cliente --> Servidor.
-- Nivel de enlace: Dirección MAC de difusión.
-- Nivel de red: Dirección IP de difusión.
-- Nivel de transporte: Puerto Destino 67/udp.
+- **Dirección:** Cliente --> Servidor.
+- **Nivel de enlace:** Dirección MAC de difusión.
+- **Nivel de red:** Dirección IP de difusión.
+- **Nivel de transporte:** Puerto Destino 67/udp.
 
 
 ### DHCP Offer.
