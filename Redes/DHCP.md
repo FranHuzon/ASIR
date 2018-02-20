@@ -28,7 +28,7 @@ Estructura de los mensajes que se envian al hacer una petición DHCP.
 
 
 # Parámetros DHCP.
-Lista de los parámetros configurables de un servidor DHCP.
+Lista de parámetros de un servidor DHCP.
 
 
 - **default-lease-time:** Tiempo de concesión por defecto.
