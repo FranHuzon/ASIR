@@ -2,9 +2,116 @@
 - Disco duro: 1 GB
 - Partición primaria: 1 GB, Formato NTFS, Etiqueta "WXP", Letra Z
 - Redimensión: Partición primaria de 1024 MB a 512 MB
-- Partición primaria: 256 MB, Formato FAT32, Etiqueta "Datos", Letra D
-- Partición primaria: 256 MB, Formato NTFS, Letra F
+- Partición primaria: 256 MB, Formato FAT32, Etiqueta "Datos", Letra Y
+- Partición primaria: 256 MB, Formato NTFS, Letra X
 
+
+### Formateo con diskpart.
+Creación y formateo de la partición primaria.
+~~~
+Microsoft DiskPart versión 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+En el equipo: JESUS-PC
+
+DISKPART> list disk
+
+  Núm Disco  Estado      Tamaño   Disp     Din  Gpt
+  ---------- ----------  -------  -------  ---  ---
+  Disco 0    En línea      32 GB      0 B
+  Disco 1    En línea     800 MB   199 MB
+  Disco 2    En línea    1024 MB  1022 MB
+
+DISKPART> select disk 2
+
+El disco 2 es ahora el disco seleccionado.
+
+DISKPART> create partition primary
+
+DiskPart ha creado satisfactoriamente la partición especificada.
+
+DISKPART> list partition
+  
+  Núm Partición  Tipo              Tamaño   Desplazamiento
+  -------------  ----------------  -------  ---------------
+* Partición 1    Principal         1022 MB    64 KB
+
+DISKPART> format fs=ntfs label=WXP
+
+  100 por ciento completado
+
+DiskPart formateó el volumen correctamente.
+
+DISKPART> assign letter=Z
+
+DiskPart asignó correctamente una letra de unidad o punto de montaje.
+
+DISKPART> shrink desired=510
+~~~
+
+
+Reducción de tamaño de la partición primaria.
+~~~
+DISKPART> shrink desired=510
+
+DiskPart redujo correctamente el volumen en:  510 MB
+
+DISKPART> list partition
+
+  Núm Partición  Tipo              Tamaño   Desplazamiento
+  -------------  ----------------  -------  ---------------
+* Partición 1    Principal          512 MB    64 KB
+
+DISKPART> create partition primary size=256
+~~~
+
+
+Creación y formateo del resto de particiones primarias.
+~~~
+DISKPART> create partition primary size=256
+
+DiskPart ha creado satisfactoriamente la partición especificada.
+
+DISKPART> list partition
+
+  Núm Partición  Tipo              Tamaño   Desplazamiento
+  -------------  ----------------  -------  ---------------
+  Partición 1    Principal          512 MB    64 KB
+* Partición 2    Principal          256 MB   513 MB
+
+DISKPART> format fs=FAT32 label=Datos
+
+  100 por ciento completado
+
+DiskPart formateó el volumen correctamente.
+
+DISKPART> assign letter=Y
+
+DiskPart asignó correctamente una letra de unidad o punto de montaje.
+
+DISKPART> create partition primary
+
+DiskPart ha creado satisfactoriamente la partición especificada.
+
+DISKPART> list partition
+
+  Núm Partición  Tipo              Tamaño   Desplazamiento
+  -------------  ----------------  -------  ---------------
+  Partición 1    Principal          512 MB    64 KB
+  Partición 2    Principal          256 MB   513 MB
+* Partición 3    Principal          254 MB   769 MB
+
+DISKPART> format fs=ntfs
+
+  100 por ciento completado
+
+DiskPart formateó el volumen correctamente.
+
+DISKPART> assign letter=X
+
+DiskPart asignó correctamente una letra de unidad o punto de montaje.
+
+DISKPART>
+~~~
 
 
 # Esquema Linux.
