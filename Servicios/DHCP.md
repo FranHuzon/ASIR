@@ -27,7 +27,15 @@ Estructura de los mensajes que se envian al hacer una petición DHCP.
 - **Dirección:** Servidor --> Cliente.
 
 
-# Parámetros DHCP.
+# Instalación.
+
+
+
+# Fichero de configuración.
+
+
+
+# Parámetros.
 Lista de parámetros de un servidor DHCP.
 
 - **default-lease-time:** Tiempo de concesión por defecto.
