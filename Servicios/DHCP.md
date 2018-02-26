@@ -36,6 +36,8 @@ root@debian:~# apt install isc-dhcp-server
 
 # Ficheros de configuración.
 Fichero de configuración del servicio ``/etc/dhcp/dhcpd.conf``.
+
+
 Fichero de configuración del demonio ``/etc/default/isc-dhcp-server``.
 
 
