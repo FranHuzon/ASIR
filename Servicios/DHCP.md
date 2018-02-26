@@ -28,18 +28,31 @@ Estructura de los mensajes que se envian al hacer una petición DHCP.
 
 
 # Instalación.
+Instalación del servidor DHCP **isc-dhcp**.
+~~~
+root@debian:~# apt install isc-dhcp-server
+~~~
 
 
-
-# Fichero de configuración.
-
+# Ficheros de configuración.
+Fichero de configuración del servicio ``/etc/dhcp/dhcpd.conf``.
+Fichero de configuración del demonio ``/etc/default/isc-dhcp-server``.
 
 
 # Parámetros.
 Lista de parámetros de un servidor DHCP.
 
 - **default-lease-time:** Tiempo de concesión por defecto.
-- **max-lease-time:** Tiempo de concesión máxima mientras se renove la concesión.
+- **max-lease-time:** Tiempo máximo de concesión.
+- **ddns-update-style:** Crea un nuevo registro en el servidor DNS cuando se concede una IP.
+- **option-domain-name:** Nombre de dominio de la red.
+- **option-domain-name-servers:** Servidor/es DNS de la red.
+- **authoritative:** Indica que es el servidor DHCP principal.
+- **subnet:** Indica la dirección de red.
+- **netmaks:** Indica la máscara de la red.
+- **range:** Rango de direcciones IP que puede conceder el servidor.
+- **option routers:** Indica la/s puerta/s de enlace.
+- **option broadcast-addres:** Dirección de difusión de la red.
 
 
 Lista de parámetros de un cliente DHCP.
