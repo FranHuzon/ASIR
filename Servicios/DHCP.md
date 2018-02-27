@@ -55,7 +55,9 @@ Lista de parámetros de un servidor DHCP.
 - **range:** Rango de direcciones IP que puede conceder el servidor.
 - **option routers:** Indica la/s puerta/s de enlace.
 - **option broadcast-addres:** Dirección de difusión de la red.
-
+- **host:** Permite establecer reservas.
+- **hardware ethernet:** Indica la dirección MAC de la máquina reserva.
+- **fixed address:** Indica la dirección IP reservada.
 
 Lista de parámetros de un cliente DHCP.
 

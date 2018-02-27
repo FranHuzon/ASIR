@@ -1,0 +1,1 @@
+- ``journalctl -u {servicio}``: Muestra los ficheros de log.
