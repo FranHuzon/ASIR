@@ -13,7 +13,18 @@ Permite insertar enlaces.
 
 
 ### h1, h2, h3...
-Permite crear titulos de diferentes tamaños de fuente.
+Permite crear titulos de diferentes tamaños.
 ~~~
 <h1>Texto</h1>
 ~~~
+
+
+### span
+
+
+
+### code
+
+
+
+### div

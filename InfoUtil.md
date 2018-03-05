@@ -14,6 +14,7 @@
 
 - ``/etc``: Ficheros de configuración de los distintos servicios.
 - ``/var/lib``: 
-- ``/var/run``:
+- ``/var/run``: 
 - ``/etc/default``: Ficheros de configuración de los demonios de los distintos servicios.
 - ``/etc/hosts``: Fichero de resolución de nombres (Cuando no hay servidor DNS).
+- ``/usr/share/doc``: Documentación de paquetes.
