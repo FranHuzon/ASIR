@@ -1037,10 +1037,10 @@ root@debian:~#
 
 Creación del raid con 4 discos (La capacidad del raid ahora es de 3.21 GB, al menos uno de los discos debe estar funcionando correctamente para así poder reconstruir la información del resto de discos).
 ~~~
-root@debian:/home/jesus# mdadm --create /dev/md5 --level=5 --raid-devices=4 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1
+root@debian:~# mdadm --create /dev/md5 --level=5 --raid-devices=4 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1
 mdadm: Defaulting to version 1.2 metadata
 mdadm: array /dev/md5 started.
-root@debian:/home/jesus# mdadm --detail /dev/md5
+root@debian:~# mdadm --detail /dev/md5
 /dev/md5:
         Version : 1.2
   Creation Time : Tue Mar  6 17:09:43 2018
@@ -1070,5 +1070,5 @@ Working Devices : 4
        1       8       33        1      active sync   /dev/sdc1
        2       8       49        2      active sync   /dev/sdd1
        4       8       65        3      active sync   /dev/sde1
-root@debian:/home/jesus# 
+root@debian:~# 
 ~~~
