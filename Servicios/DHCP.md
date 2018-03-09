@@ -47,8 +47,8 @@ Lista de parámetros de un servidor DHCP.
 - **default-lease-time:** Tiempo de concesión por defecto.
 - **max-lease-time:** Tiempo máximo de concesión.
 - **ddns-update-style:** Crea un nuevo registro en el servidor DNS cuando se concede una IP.
-- **option-domain-name:** Nombre de dominio de la red.
-- **option-domain-name-servers:** Servidor/es DNS de la red.
+- **option domain-name:** Nombre de dominio de la red.
+- **option domain-name-servers:** Servidor/es DNS de la red.
 - **authoritative:** Indica que es el servidor DHCP principal.
 - **subnet:** Indica la dirección de red.
 - **netmaks:** Indica la máscara de la red.
