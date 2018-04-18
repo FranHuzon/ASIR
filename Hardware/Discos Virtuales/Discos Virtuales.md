@@ -188,4 +188,11 @@ drwx------ 2 root root 16384 abr 18 11:09 lost+found
 root@debian:/mnt# 
 ~~~
 
+
+### Esquema Windows.
+- Disco Virtual: 2GB
+- Partición Primaria: 1GB, Formato FAT32, Letra Z
+- Partición Primaria: 1GB, Formato ntfs, Letra Y
+
+
 ![Sin titulo](prueba.png)
