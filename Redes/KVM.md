@@ -1,7 +1,7 @@
 # Generar dirección MAC.
 Para que las interfaces de nuestra máquina virtual puedan funcionar correctamente deberán tener una dirección MAC válida, deberemos generar una dirección MAC por cada interfaz que queramos utilizar.
 ~~~
-jesus@debian:~$ MAC0=$(echo "02:"`openssl rand -hex 5 | sed 's/\(..\)/\1:/g; s/.$//'`)
+jesus@debian:~$ MAC0=$(echo "00:"`openssl rand -hex 5 | sed 's/\(..\)/\1:/g; s/.$//'`)
 ~~~
 
 
