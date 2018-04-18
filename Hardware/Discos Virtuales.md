@@ -172,3 +172,20 @@ sda
 sr0                                                          
 root@debian:/home/jesus/VirtualDisk# 
 ~~~
+
+
+Montaje y prueba de funcionamiento.
+~~~
+root@debian:/home/jesus/VirtualDisk# mount /dev/mapper/loop0p1 /mnt
+root@debian:/home/jesus/VirtualDisk# cd /mnt
+root@debian:/mnt# touch prueba1
+root@debian:/mnt# touch prueba2
+root@debian:/mnt# ls -l
+total 16
+drwx------ 2 root root 16384 abr 18 11:09 lost+found
+-rw-r--r-- 1 root root     0 abr 18 11:49 prueba1
+-rw-r--r-- 1 root root     0 abr 18 11:49 prueba2
+root@debian:/mnt# 
+~~~
+
+![Sin titulo](/home/Imágenes/prueba.png)
