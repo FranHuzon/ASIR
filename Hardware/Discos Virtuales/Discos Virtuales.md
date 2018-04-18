@@ -188,4 +188,4 @@ drwx------ 2 root root 16384 abr 18 11:09 lost+found
 root@debian:/mnt# 
 ~~~
 
-![Sin titulo](/home/Imágenes/prueba.png)
+![Sin titulo](prueba.png)
