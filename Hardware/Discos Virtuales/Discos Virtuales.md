@@ -205,25 +205,35 @@ root@debian:/mnt#
 
 ##### Creación y formateo de las distintas particiones
 Partición 1.
+
+
 ![Sin titulo](particion1_tamaño.png)
 ![Sin titulo](particion1_letra.png)
 ![Sin titulo](particion1_sf.png)
 
 
 Partición 2.
+
+
 ![Sin titulo](particion2_tamaño.png)
 ![Sin titulo](particion2_letra.png)
 ![Sin titulo](particion2_sf.png)
 
 
 Disco formateado.
+
+
 ![Sin titulo](particiones.png)
 
 
 ##### Pruebas de las distintas particiones
 Partición 1.
+
+
 ![Sin titulo](particion1_prueba.png)
 
 
-Partición 2-
+Partición 2.
+
+
 ![Sin titulo](particion2_prueba.png)
