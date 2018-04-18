@@ -195,4 +195,35 @@ root@debian:/mnt#
 - Partición Primaria: 1GB, Formato ntfs, Letra Y
 
 
-![Sin titulo](prueba.png)
+##### Creación del disco virtual.
+![Sin titulo](crear_disco.png)
+
+
+##### Inicializar el disco virtual.
+![Sin titulo](inicializardisco.png)
+
+
+##### Creación y formateo de las distintas particiones
+Partición 1.
+![Sin titulo](particion1_tamaño.png)
+![Sin titulo](particion1_letra.png)
+![Sin titulo](particion1_sf.png)
+
+
+Partición 2.
+![Sin titulo](particion2_tamaño.png)
+![Sin titulo](particion2_letra.png)
+![Sin titulo](particion2_sf.png)
+
+
+Disco formateado.
+![Sin titulo](particiones.png)
+
+
+##### Pruebas de las distintas particiones
+Partición 1.
+![Sin titulo](particion1_prueba.png)
+
+
+Partición 2-
+![Sin titulo](particion2_prueba.png)
