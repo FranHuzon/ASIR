@@ -79,6 +79,14 @@ root@debian:~#
 ~~~
 
 
+### Creación de una imagen ISO Live.
+Creación del directorio donde guardaremos los archivos.
+~~~
+root@debian:~# mkdir iso_live
+~~~
+
+
+Crear un entorno Debian.
 ~~~
 root@debian:~# debootstrap \
 > --arch=i386 \
@@ -97,9 +105,23 @@ I: Base system installed successfully.
 root@debian:~# 
 ~~~
 
+
+Entrar con ``chroot`` al entorno que hemos creado.
 ~~~
 root@debian:~# chroot iso_live/chroot
-root@debian:/# echo "debian-live" > /etc/hostname 
+root@debian:/#
+~~~
+
+
+Añadir un hostname al entorno.
+~~~
+root@debian:/# echo "debian-live" > /etc/hostname
+root@debian:/#
+~~~
+
+
+Elegir un Kernel Linux e instalarlo.
+~~~
 root@debian:/# apt-cache search linux-image
 linux-image-3.16.0-4-586 - Linux 3.16 for older PCs
 linux-image-3.16.0-4-686-pae - Linux 3.16 for modern PCs
@@ -110,10 +132,6 @@ linux-image-586 - Linux for older PCs (meta-package)
 linux-image-686-pae - Linux for modern PCs (meta-package)
 linux-image-686-pae-dbg - Debugging symbols for Linux 686-pae configuration (meta-package)
 linux-image-amd64 - Linux for 64-bit PCs (meta-package)
-root@debian:/#
-~~~
-
-~~~
 root@debian:/# apt-get update && \
 > apt-get install --no-install-recommends \
 > linux-image-3.16.0-4-686-pae \
@@ -124,126 +142,11 @@ Hit http://ftp.es.debian.org jessie Release.gpg
 Hit http://ftp.es.debian.org jessie Release
 Hit http://ftp.es.debian.org jessie/main i386 Packages
 Get:1 http://ftp.es.debian.org jessie/main Translation-en [4583 kB]
-Fetched 4583 kB in 4s (1134 kB/s)                              
-Reading package lists... Done
-Reading package lists... Done
-Building dependency tree... Done
-systemd-sysv is already the newest version.
-The following extra packages will be installed:
-  busybox cpio initramfs-tools klibc-utils kmod libklibc libuuid-perl linux-base live-boot-initramfs-tools
-Suggested packages:
-  libarchive1 bash-completion linux-doc-3.16 debian-kernel-handbook grub-pc extlinux curlftpfs cryptsetup httpfs2 unionfs-fuse wget
-Recommended packages:
-  firmware-linux-free irqbalance libc6-i686 live-boot-doc live-tools rsync uuid-runtime
-The following NEW packages will be installed:
-  busybox cpio initramfs-tools klibc-utils kmod libklibc libuuid-perl linux-base linux-image-3.16.0-4-686-pae live-boot live-boot-initramfs-tools
-0 upgraded, 11 newly installed, 0 to remove and 0 not upgraded.
-Need to get 34.6 MB of archives.
-After this operation, 124 MB of additional disk space will be used.
-Do you want to continue? [Y/n] Y
-Get:1 http://ftp.es.debian.org/debian/ jessie/main kmod i386 18-3 [93.5 kB]
-Get:2 http://ftp.es.debian.org/debian/ jessie/main libuuid-perl i386 0.05-1+b1 [10.7 kB]
-Get:3 http://ftp.es.debian.org/debian/ jessie/main linux-base all 3.5 [34.3 kB]
-Get:4 http://ftp.es.debian.org/debian/ jessie/main libklibc i386 2.0.4-2 [52.8 kB]
-Get:5 http://ftp.es.debian.org/debian/ jessie/main klibc-utils i386 2.0.4-2 [108 kB]
-Get:6 http://ftp.es.debian.org/debian/ jessie/main cpio i386 2.11+dfsg-4.1+deb8u1 [181 kB]
-Get:7 http://ftp.es.debian.org/debian/ jessie/main busybox i386 1:1.22.0-9+deb8u1 [367 kB]
-Get:8 http://ftp.es.debian.org/debian/ jessie/main initramfs-tools all 0.120+deb8u3 [96.7 kB]
-Get:9 http://ftp.es.debian.org/debian/ jessie/main linux-image-3.16.0-4-686-pae i386 3.16.51-2 [33.5 MB]
-Get:10 http://ftp.es.debian.org/debian/ jessie/main live-boot-initramfs-tools all 4.0.2-1 [29.3 kB]
-Get:11 http://ftp.es.debian.org/debian/ jessie/main live-boot all 4.0.2-1 [51.9 kB]
-Fetched 34.6 MB in 2s (15.3 MB/s) 
-perl: warning: Setting locale failed.
-perl: warning: Please check that your locale settings:
-	LANGUAGE = (unset),
-	LC_ALL = (unset),
-	LANG = "es_ES.UTF-8"
-    are supported and installed on your system.
-perl: warning: Falling back to the standard locale ("C").
-locale: Cannot set LC_CTYPE to default locale: No such file or directory
-locale: Cannot set LC_MESSAGES to default locale: No such file or directory
-locale: Cannot set LC_ALL to default locale: No such file or directory
-debconf: delaying package configuration, since apt-utils is not installed
-E: Can not write log (Is /dev/pts mounted?) - posix_openpt (19: No such device)
-Selecting previously unselected package kmod.
-(Reading database ... 7449 files and directories currently installed.)
-Preparing to unpack .../archives/kmod_18-3_i386.deb ...
-Unpacking kmod (18-3) ...
-Selecting previously unselected package libuuid-perl.
-Preparing to unpack .../libuuid-perl_0.05-1+b1_i386.deb ...
-Unpacking libuuid-perl (0.05-1+b1) ...
-Selecting previously unselected package linux-base.
-Preparing to unpack .../linux-base_3.5_all.deb ...
-Unpacking linux-base (3.5) ...
-Selecting previously unselected package libklibc.
-Preparing to unpack .../libklibc_2.0.4-2_i386.deb ...
-Unpacking libklibc (2.0.4-2) ...
-Selecting previously unselected package klibc-utils.
-Preparing to unpack .../klibc-utils_2.0.4-2_i386.deb ...
-Unpacking klibc-utils (2.0.4-2) ...
-Selecting previously unselected package cpio.
-Preparing to unpack .../cpio_2.11+dfsg-4.1+deb8u1_i386.deb ...
-Unpacking cpio (2.11+dfsg-4.1+deb8u1) ...
-Selecting previously unselected package busybox.
-Preparing to unpack .../busybox_1%3a1.22.0-9+deb8u1_i386.deb ...
-Unpacking busybox (1:1.22.0-9+deb8u1) ...
-Selecting previously unselected package initramfs-tools.
-Preparing to unpack .../initramfs-tools_0.120+deb8u3_all.deb ...
-Unpacking initramfs-tools (0.120+deb8u3) ...
-Selecting previously unselected package linux-image-3.16.0-4-686-pae.
-Preparing to unpack .../linux-image-3.16.0-4-686-pae_3.16.51-2_i386.deb ...
-locale: Cannot set LC_CTYPE to default locale: No such file or directory
-locale: Cannot set LC_MESSAGES to default locale: No such file or directory
-locale: Cannot set LC_ALL to default locale: No such file or directory
-debconf: unable to initialize frontend: Dialog
-debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
-debconf: falling back to frontend: Readline
-debconf: unable to initialize frontend: Readline
-debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/i386-linux-gnu/perl/5.20.2 /usr/local/share/perl/5.20.2 /usr/lib/i386-linux-gnu/perl5/5.20 /usr/share/perl5 /usr/lib/i386-linux-gnu/perl/5.20 /usr/share/perl/5.20 /usr/local/lib/site_perl .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
-debconf: falling back to frontend: Teletype
-Unpacking linux-image-3.16.0-4-686-pae (3.16.51-2) ...
-Selecting previously unselected package live-boot-initramfs-tools.
-Preparing to unpack .../live-boot-initramfs-tools_4.0.2-1_all.deb ...
-Unpacking live-boot-initramfs-tools (4.0.2-1) ...
-Selecting previously unselected package live-boot.
-Preparing to unpack .../live-boot_4.0.2-1_all.deb ...
-Unpacking live-boot (4.0.2-1) ...
-Processing triggers for systemd (215-17+deb8u7) ...
-Setting up kmod (18-3) ...
-Setting up libuuid-perl (0.05-1+b1) ...
-Setting up linux-base (3.5) ...
-locale: Cannot set LC_CTYPE to default locale: No such file or directory
-locale: Cannot set LC_MESSAGES to default locale: No such file or directory
-locale: Cannot set LC_ALL to default locale: No such file or directory
-debconf: unable to initialize frontend: Dialog
-debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
-debconf: falling back to frontend: Readline
-debconf: unable to initialize frontend: Readline
-debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/i386-linux-gnu/perl/5.20.2 /usr/local/share/perl/5.20.2 /usr/lib/i386-linux-gnu/perl5/5.20 /usr/share/perl5 /usr/lib/i386-linux-gnu/perl/5.20 /usr/share/perl/5.20 /usr/local/lib/site_perl .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
-debconf: falling back to frontend: Teletype
-Setting up libklibc (2.0.4-2) ...
-Setting up klibc-utils (2.0.4-2) ...
-Setting up cpio (2.11+dfsg-4.1+deb8u1) ...
-update-alternatives: using /bin/mt-gnu to provide /bin/mt (mt) in auto mode
-Setting up busybox (1:1.22.0-9+deb8u1) ...
-Setting up initramfs-tools (0.120+deb8u3) ...
-update-initramfs: deferring update (trigger activated)
-Setting up linux-image-3.16.0-4-686-pae (3.16.51-2) ...
-locale: Cannot set LC_CTYPE to default locale: No such file or directory
-locale: Cannot set LC_MESSAGES to default locale: No such file or directory
-locale: Cannot set LC_ALL to default locale: No such file or directory
-debconf: unable to initialize frontend: Dialog
-debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
-debconf: falling back to frontend: Readline
-debconf: unable to initialize frontend: Readline
-debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/i386-linux-gnu/perl/5.20.2 /usr/local/share/perl/5.20.2 /usr/lib/i386-linux-gnu/perl5/5.20 /usr/share/perl5 /usr/lib/i386-linux-gnu/perl/5.20 /usr/share/perl/5.20 /usr/local/lib/site_perl .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
-debconf: falling back to frontend: Teletype
-/etc/kernel/postinst.d/initramfs-tools:
-update-initramfs: Generating /boot/initrd.img-3.16.0-4-686-pae
-live-boot: core filesystems devices utils udev blockdev.
-Setting up live-boot-initramfs-tools (4.0.2-1) ...
-update-initramfs: deferring update (trigger activated)
-Setting up live-boot (4.0.2-1) ...
+.
+.
+.
+.
+.
 Processing triggers for systemd (215-17+deb8u7) ...
 Processing triggers for initramfs-tools (0.120+deb8u3) ...
 update-initramfs: Generating /boot/initrd.img-3.16.0-4-686-pae
@@ -251,6 +154,8 @@ live-boot: core filesystems devices utils udev blockdev.
 root@debian:/# 
 ~~~
 
+
+Establecer la contraseña del usuario ``root``.
 ~~~
 root@debian:/# passwd root
 Enter new UNIX password: 
@@ -259,10 +164,14 @@ passwd: password updated successfully
 root@debian:/# 
 ~~~
 
+
+Crear los directorios que contendran los ficheros de la imagen live.
 ~~~
 root@debian:~# mkdir -p iso_live/image/{live,boot/grub}
 ~~~
 
+
+Comprimir el entorno chroot en un sistema de ficheros Squash.
 ~~~
 root@debian:~# mksquashfs \
 > iso_live/chroot \
@@ -306,12 +215,28 @@ Number of gids 7
 root@debian:~# 
 ~~~
 
+
+Copiar el kernel y el initramfs desde el directorio chroot al directorio live
 ~~~
 root@debian:~# cp iso_live/chroot/boot/vmlinuz-3.16.0-4-686-pae iso_live/image/live/vmlinuz
 root@debian:~# cp iso_live/chroot/boot/initrd.img-3.16.0-4-686-pae iso_live/image/live/initrd
 root@debian:~# 
 ~~~
 
+
+Crear un menu para el grub en el fichero ``iso_live/image/boot/grub/grub.cfg``.
+~~~
+set default="0"
+set timeout=30
+
+menuentry "Debian Live" {
+        linux /live/vmlinuz boot=live quiet modeset
+        initrd /live/initrd
+}
+~~~
+
+
+Crear una imagen BIOS arrancable.
 ~~~
 root@debian:~# (cd /usr/lib/grub/i386-pc && \
 >     grub-mkimage \
@@ -326,6 +251,8 @@ root@debian:~# (cd /usr/lib/grub/i386-pc && \
 root@debian:~# 
 ~~~
 
+
+Combinar el grub con la imagen BIOS.
 ~~~
 root@debian:~# (cd iso_live/image/boot/grub && \
 >     cat \
@@ -336,6 +263,8 @@ root@debian:~# (cd iso_live/image/boot/grub && \
 root@debian:~# 
 ~~~
 
+
+Generar el fichero ISO.
 ~~~
 root@debian:~# xorriso \
 >     -as mkisofs \
