@@ -4,7 +4,8 @@
 #### Pasos:
  - Paso 1. Creación del dominio.
  - Paso 2. Creación de los usuarios.
- - Paso 3. Añadir los clientes al dominio.
+ - Paso 3. Modificar el servidor DNS de los clientes.
+ - Paso 4. Añadir los clientes al dominio.
 
 
 ***Paso 1:***
@@ -16,6 +17,11 @@ Accedemos a **Active Directory Users and Computers** a través de **Tools**, des
 
 
 ***Paso 3:***
+Desde **Powershell** ejecutamos el comando ``sconfig``, una vez en el menú seleccionamos la opción 8 (**Network Settings**), indicamos la interfaz que deseamos modificar a través de su número (**#**), por último seleccionamos la opción 2 (**Set DNS Server**) e indicamos la dirección IP del controlador de dominio.
+
+
+***Paso 4:***
+Desde **Powershell** ejecutamos el comando ``sconfig``, una vez en el menú seleccionamos la opción 1 (**Domain/Workgroup**), elegimos la opción D (**Domain**), indicamos el dominio al que queremos unirnos y nos logeamos con el usuario creado previamente.
 
 
 #### Necesitamos acceder a los recursos compartidos del otro dominio, ¿qué debemos configurar entre los dominios. Explica de forma detallada todos y cada uno de los pasos necesarios. ¿Qué ocurriría si se configura únicamente una relación de confianza unidireccional entre los dos dominios?. Explícalo detalladamente. El dominio PrimerApellido.local, comparte la carpeta PrimerApellidoComparte, para que los usuarios del dominio de PrimerApellido.local., puedan acceder a su lectura. Sería deseable que los usuarios de SegundoApellido.local pudieran también acceder, ¿qué deberías configurar?
@@ -27,6 +33,19 @@ Accedemos a **Active Directory Users and Computers** a través de **Tools**, des
  - Paso 3. Crear la relación de confianza bidireccional.
  - Paso 4. Crear la carpeta compartida.
  - Paso 5. Acceder al recurso compartido.
+
+
+***Paso 1:***
+Desde **Powershell** ejecutamos el comando ``netsh advfirewall set allprofiles state off``.
+
+
+***Paso 2:***
+Accedemos a **DNS** a través de **Tools**, seleccionamos la pestaña **Conditional Forwarders**, hacemos click derecho y entramos en **New Conditional Forwarder**, por último indicamos el nombre del segundo dominio, la dirección IP de su controlador de dominio y marcamos la opción **Store this conditional forwarder...**.
+ 
+ 
+ ***Paso 3:***
+ Accedemos a **Active Directory Domains and Trusts** a través de **Tools**, hacemos click derecho y entramos en **Properties**,en la pestaña Trusts seleccionamos New Trust, indicamos el nombre del dominio con el que queremos hacer la relación, y marcamos las siguientes opciones; **Forest Trust**, **Two-way trust**, **Both this domain and the specified domain** y **Forest-wide authentication**.
+
 
 
 #### Supongamos que el administrador del dominio PrimerApellido.local, necesitara administrar su dominio, y además el dominio SegundoApellido.local. ¿Qué necesitamos configurar para que pueda administrar ambos dominios.
