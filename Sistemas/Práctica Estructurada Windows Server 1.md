@@ -7,6 +7,14 @@
  - Paso 3. Añadir los clientes al dominio.
 
 
+##### Paso 1.
+Accedemos a **Add roles and features** a través de **Manage**, en la pestaña Server Roles marcamos **Active Directory Domain Services**, confirmamos los cambios y comenzamos la instalación. Una vez instalado el rol accedemos a las notificaciones y hacemos click en **Promote this server to a domain controller**, en la pestaña **Deployment Configuration** marcamos la opción **Add a new forest** e indicamos el nombre del dominio.
+
+
+##### Paso 2.
+Accedemos a **Active Directory Users and Computers** a través de **Tools**,
+
+
 #### Necesitamos acceder a los recursos compartidos del otro dominio, ¿qué debemos configurar entre los dominios. Explica de forma detallada todos y cada uno de los pasos necesarios. ¿Qué ocurriría si se configura únicamente una relación de confianza unidireccional entre los dos dominios?. Explícalo detalladamente. El dominio PrimerApellido.local, comparte la carpeta PrimerApellidoComparte, para que los usuarios del dominio de PrimerApellido.local., puedan acceder a su lectura. Sería deseable que los usuarios de SegundoApellido.local pudieran también acceder, ¿qué deberías configurar?
 
 
