@@ -13,11 +13,11 @@ Accedemos a **Add roles and features** a través de **Manage**, en la pestaña S
 
 
 ***Paso 2:***
-Accedemos a **Active Directory Users and Computers** a través de **Tools**, desplegamos nuestro dominio, hacemos click derecho en **Users** y en el desplagable **New** seleccionamos **User**, por ultimo indicamos el nombre de usuario (*CLIENTgarcia/CLIENTmunoz*) así como su contraseña.
+Accedemos a **Active Directory Users and Computers** a través de **Tools**, desplegamos nuestro dominio (*garcia.local/munoz.local*), hacemos click derecho en **Users** y en el desplagable **New** seleccionamos **User**, por ultimo indicamos el nombre de usuario (*CLIENTgarcia/CLIENTmunoz*) así como su contraseña.
 
 
 ***Paso 3:***
-Desde **Powershell** ejecutamos el comando ``sconfig``, una vez en el menú seleccionamos la opción 8 (**Network Settings**), indicamos la interfaz que deseamos modificar a través de su número (**#**), por último seleccionamos la opción 2 (**Set DNS Server**) e indicamos la dirección IP del controlador de dominio.
+Desde **Powershell** ejecutamos el comando ``sconfig``, una vez en el menú seleccionamos la opción 8 (**Network Settings**), indicamos la interfaz que deseamos modificar a través de su número (**#**), por último seleccionamos la opción 2 (**Set DNS Server**) e indicamos la dirección IP del controlador de dominio (*DCgarcia/DCmunoz*).
 
 
 ***Paso 4:***
