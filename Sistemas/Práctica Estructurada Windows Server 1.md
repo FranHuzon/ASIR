@@ -1,4 +1,4 @@
-####  Configura todo lo necesario para que los dos dominios estén operativos. Se deberán configurar los clientes para que puedan iniciar sesión en sus respectivos dominios. Explica de forma detallada todos y cada uno de los pasos necesarios para tal fin.
+###  Configura todo lo necesario para que los dos dominios estén operativos. Se deberán configurar los clientes para que puedan iniciar sesión en sus respectivos dominios. Explica de forma detallada todos y cada uno de los pasos necesarios para tal fin.
 
 
 #### Pasos:
@@ -24,7 +24,7 @@ Desde **Powershell** ejecutamos el comando ``sconfig``, una vez en el menú sele
 Desde **Powershell** ejecutamos el comando ``sconfig``, una vez en el menú seleccionamos la opción 1 (**Domain/Workgroup**), elegimos la opción D (**Domain**), indicamos el dominio al que queremos unirnos (*garcia.local/munoz.local*)y nos logeamos con el usuario creado previamente (*CLIENTgarcia/CLIENTmunoz*).
 
 
-#### Necesitamos acceder a los recursos compartidos del otro dominio, ¿qué debemos configurar entre los dominios. Explica de forma detallada todos y cada uno de los pasos necesarios. ¿Qué ocurriría si se configura únicamente una relación de confianza unidireccional entre los dos dominios?. Explícalo detalladamente. El dominio PrimerApellido.local, comparte la carpeta PrimerApellidoComparte, para que los usuarios del dominio de PrimerApellido.local., puedan acceder a su lectura. Sería deseable que los usuarios de SegundoApellido.local pudieran también acceder, ¿qué deberías configurar?
+### Necesitamos acceder a los recursos compartidos del otro dominio, ¿qué debemos configurar entre los dominios. Explica de forma detallada todos y cada uno de los pasos necesarios. ¿Qué ocurriría si se configura únicamente una relación de confianza unidireccional entre los dos dominios?. Explícalo detalladamente. El dominio PrimerApellido.local, comparte la carpeta PrimerApellidoComparte, para que los usuarios del dominio de PrimerApellido.local., puedan acceder a su lectura. Sería deseable que los usuarios de SegundoApellido.local pudieran también acceder, ¿qué deberías configurar?
 
 
 #### Pasos:
@@ -50,7 +50,7 @@ Accedemos a **Active Directory Domains and Trusts** a través de **Tools**, hace
 Para compartir la carpeta con el otro dominio, en la opción **Location** debemos indicar el nombre del segundo dominio (*munoz.local*) y añadir el grupo **Domain Users** de dicho dominio.
 
 
-#### Supongamos que el administrador del dominio PrimerApellido.local, necesitara administrar su dominio, y además el dominio SegundoApellido.local. ¿Qué necesitamos configurar para que pueda administrar ambos dominios.
+### Supongamos que el administrador del dominio PrimerApellido.local, necesitara administrar su dominio, y además el dominio SegundoApellido.local. ¿Qué necesitamos configurar para que pueda administrar ambos dominios.
 
 
 #### Pasos:
@@ -61,7 +61,7 @@ Para compartir la carpeta con el otro dominio, en la opción **Location** debemo
 Accedemos a **Active Directory Administrative Center** a través de **Administrative Tools**, en **Manage** seleccionamos **Add navigation Nodes**, hacemos click en **Connect to other domains**, indicamos el nombre del segundo dominio (*munoz.local*) y añadimos el contenedor del dominio (*munoz*).
 
 
-#### Sobre la relación de confianza entre PrimerApellido.local y SegundoApellido.local, modificala para que la autentificación sea selectiva. ¿Qué debes configurar para que los usuarios del apartado 3 puedan seguir accediendo a PrimerApellidoComparte?. Explica la diferencia entre autenticación selectiva y autenticación en todo el dominio. 
+### Sobre la relación de confianza entre PrimerApellido.local y SegundoApellido.local, modificala para que la autentificación sea selectiva. ¿Qué debes configurar para que los usuarios del apartado 3 puedan seguir accediendo a PrimerApellidoComparte?. Explica la diferencia entre autenticación selectiva y autenticación en todo el dominio. 
 
 
 #### Pasos:
